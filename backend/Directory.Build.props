@@ -1,0 +1,27 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- All projects compile against .NET 10. Change here if we ever upgrade. -->
+    <TargetFramework>net10.0</TargetFramework>
+
+    <!-- Use the latest C# language features (currently C# 14 in .NET 10) -->
+    <LangVersion>latest</LangVersion>
+
+    <!-- Catch null bugs at compile time -->
+    <Nullable>enable</Nullable>
+
+    <!-- Auto-import common namespaces (System, System.Linq, etc.) -->
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Treat compiler warnings as errors. Forces clean code. -->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <!-- Enable all built-in code analyzers (style, correctness, perf) -->
+    <AnalysisMode>All</AnalysisMode>
+    <AnalysisLevel>latest</AnalysisLevel>
+
+    <!-- Reproducible builds: same source = same binary bytes. Helps with caching and supply-chain audits. -->
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+</Project>

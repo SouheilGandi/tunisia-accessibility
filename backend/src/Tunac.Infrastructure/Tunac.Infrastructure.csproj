@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tunac.Domain\Tunac.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

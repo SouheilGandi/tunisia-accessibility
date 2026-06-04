@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Tunac.Api/Tunac.Api.csproj" />
+    <Project Path="src/Tunac.Domain/Tunac.Domain.csproj" />
+    <Project Path="src/Tunac.Infrastructure/Tunac.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Tunac.Tests/Tunac.Tests.csproj" />
+  </Folder>
+</Solution>
