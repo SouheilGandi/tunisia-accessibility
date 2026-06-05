@@ -1,0 +1,21 @@
+﻿services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: tunac-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tunac
+      POSTGRES_PASSWORD: dev_only_change_me
+      POSTGRES_DB: tunac
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - tunac-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tunac -d tunac"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  tunac-pgdata:

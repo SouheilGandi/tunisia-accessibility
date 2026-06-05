@@ -46,3 +46,19 @@ dotnet_naming_symbols.any_async_method.applicable_kinds = method
 dotnet_naming_symbols.any_async_method.required_modifiers = async
 dotnet_naming_style.end_in_async.required_suffix = Async
 dotnet_naming_style.end_in_async.capitalization = pascal_case
+
+# === Generated code: EF Core migrations ===
+# EF Core generates these files. We don't write them; we shouldn't lint them
+# against our personal style rules. `generated_code = true` tells Roslyn
+# analyzers to treat the file as auto-generated.
+
+[**/Migrations/**.cs]
+generated_code = true
+
+# Allow the block-scoped namespace style EF's generator uses
+csharp_style_namespace_declarations = file_scoped:silent
+
+# Silence a handful of analyzer rules that fire on migration patterns
+dotnet_diagnostic.IDE0161.severity = none   # Convert to file-scoped namespace
+dotnet_diagnostic.CA1062.severity = none    # Validate arguments of public methods
+dotnet_diagnostic.CA1822.severity = none    # Mark members as static
