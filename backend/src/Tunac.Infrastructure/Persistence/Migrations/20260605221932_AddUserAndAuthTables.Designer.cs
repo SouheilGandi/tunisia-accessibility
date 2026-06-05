@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Tunac.Infrastructure.Persistence;
@@ -11,9 +12,11 @@ using Tunac.Infrastructure.Persistence;
 namespace Tunac.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(TunacDbContext))]
-    partial class TunacDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260605221932_AddUserAndAuthTables")]
+    partial class AddUserAndAuthTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
